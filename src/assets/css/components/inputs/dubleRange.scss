@@ -1,0 +1,47 @@
+@import '../../includes/variables';
+
+
+.MuiSlider-root {
+    color: $primary-color !important;
+    left: .4em;
+}
+
+.custom-range {
+    
+    .title-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 0;
+        border-bottom: 1px solid $gray;
+        cursor: pointer;
+        #range-slider {}
+
+        >i {
+            transform: rotate(90deg)
+        }
+
+        .open-icon {
+            transform: rotate(270deg)
+        }
+    }
+
+    .range-main-content {
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        .prices-block {
+            margin: 1em 0;
+        }
+
+    }
+
+    .range-main-content-open {
+        height: auto;
+        opacity: 1;
+        pointer-events: all;
+    }
+}

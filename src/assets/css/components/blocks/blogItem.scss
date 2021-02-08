@@ -1,0 +1,51 @@
+@import '../../includes/variables';
+
+.blog-item {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+    background-color: $background-color;
+    margin: 0 auto;
+    * {
+        transition: .3s;
+    }
+    >a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+
+        .blog-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .image {
+                width: 100%;
+                height: 250px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .name {
+                margin: 1em 0 .5em;
+                color: $text-dark-color;
+            }
+
+            .date {
+                color: $text-light-color;
+                width: max-content;
+                >.dmy {
+                    color: $primary-color;
+                    width: max-content;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &:hover {
+        .name {
+            color: $primary-color!important;
+        }
+    }
+}

@@ -1,0 +1,252 @@
+footer {
+  display: flex;
+  flex-direction: column;
+}
+footer .top-footer {
+  background-color: #0aa493;
+}
+footer .top-footer .layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .top-footer .layout .news-letter-info {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 2em 0;
+  width: 40%;
+}
+footer .top-footer .layout .news-letter-info > .icon {
+  margin-right: 1em;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  mask-image: url("../images/newletter_icon.svg");
+}
+footer .top-footer .layout .news-letter-info h3 {
+  font-size: 30px;
+}
+footer .top-footer .layout .news-letter-info span {
+  letter-spacing: 1px;
+  line-height: 31px;
+  font-weight: 600;
+  font-size: 14px;
+}
+footer .top-footer .layout .subscribe-block {
+  width: 30%;
+  height: 50px;
+}
+footer .top-footer .layout .subscribe-block .subscribe form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  background-color: #ffffff;
+}
+footer .top-footer .layout .subscribe-block .subscribe form input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+}
+footer .top-footer .layout .subscribe-block .subscribe form .custom-button {
+  height: 100%;
+  width: 150px;
+}
+footer .top-footer .layout .subscribe-block .subscribe form .custom-button button {
+  background-color: #222222;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+footer .top-footer .layout .subscribe-block .subscribe form .custom-button button:hover {
+  background-color: #383838;
+  color: #ffffff;
+}
+footer .top-footer .layout .subscribe-block .subscribe form .custom-button button:active {
+  background-color: #222222;
+}
+footer .top-footer .layout .subscribe-block > span {
+  color: crimson;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 5%;
+}
+footer .top-footer .layout .support-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+footer .top-footer .layout .support-block > .icon {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  mask-image: url("../images/support_icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 1em;
+}
+footer .top-footer .layout .support-block .support-info {
+  color: #ffffff;
+}
+footer .main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 2em 0;
+}
+footer .main-footer .layout {
+  display: flex;
+}
+footer .main-footer .layout .description {
+  display: inline-block;
+  padding: 2em 0;
+  padding-right: 9em;
+}
+footer .main-footer .layout .info-block .logo-block {
+  width: 160px;
+  height: 50px;
+}
+footer .main-footer .layout .info-block .logo-block .logo {
+  width: 100%;
+  height: 100%;
+  background-image: url("http://blueskytechmage.com/ayo/pub/media/logo/stores/24/logo_home6.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+footer .main-footer .layout .contact-info {
+  display: flex;
+  align-items: center;
+}
+footer .main-footer .layout .contact-info .contact-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #0aa493;
+  mask-image: url("../images/hotline_icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 1em;
+}
+footer .main-footer .layout .contact-info .info-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+footer .main-footer .layout .contact-info .info-block * {
+  margin: 0.2em 0;
+}
+footer .main-footer .layout .contact-info .info-block .title {
+  color: #999999;
+}
+footer .main-footer .layout .contact-info .info-block .phone {
+  font-size: 25px;
+  color: #222222;
+  font-weight: 800;
+}
+footer .main-footer .layout .location {
+  font-size: 13px;
+  font-weight: 600;
+}
+footer .main-footer .layout .links-block {
+  display: flex;
+}
+footer .main-footer .layout .links-block * {
+  transition: 0.2s;
+}
+footer .main-footer .layout .links-block ul {
+  list-style-type: none;
+  margin: 1em 0em;
+  font-size: 15px;
+}
+footer .main-footer .layout .links-block ul li {
+  margin: 1em 0;
+  width: max-content;
+}
+footer .main-footer .layout .links-block ul li:not(:last-child) {
+  margin-right: 6em;
+}
+footer .main-footer .layout .links-block ul li a {
+  text-decoration: none;
+  color: #999999;
+}
+footer .main-footer .layout .links-block ul li a:hover {
+  color: #0aa493;
+}
+footer .bottom-footer {
+  border-top: 1px solid #e1e1e1;
+}
+footer .bottom-footer * {
+  transition: 0.2s;
+}
+footer .bottom-footer .layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2em 0;
+}
+footer .bottom-footer .layout .copyright a {
+  color: #0aa493;
+  text-decoration: none;
+}
+footer .bottom-footer .layout .copyright a:hover {
+  color: #38d1bf;
+}
+@media only screen and (max-width: 767px) {
+  footer .top-footer > .layout {
+    flex-direction: column;
+  }
+  footer .top-footer > .layout > div:not(:last-child) {
+    width: 100% !important;
+    margin: 1em auto;
+    padding: 0;
+  }
+  footer .top-footer > .layout > div:last-child {
+    display: none !important;
+  }
+  footer .top-footer > .layout .news-letter-info {
+    align-items: center;
+  }
+  footer .top-footer > .layout .news-letter-info .icon {
+    width: 120px;
+    height: 50px;
+  }
+  footer .main-footer > .layout {
+    flex-direction: column;
+  }
+  footer .main-footer > .layout .description {
+    width: 100%;
+    padding: 1em 0;
+  }
+  footer .main-footer > .layout > div {
+    margin: 1em;
+  }
+  footer .main-footer > .layout .links-block {
+    flex-wrap: wrap;
+  }
+  footer .main-footer > .layout .links-block ul {
+    width: 50%;
+  }
+  footer .bottom-footer > .layout {
+    flex-direction: column;
+  }
+  footer .bottom-footer > .layout > * {
+    margin: 0.5em 0;
+  }
+  footer .bottom-footer > .layout img {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  footer .main-footer > .layout .links-block ul {
+    width: 100%;
+  }
+}

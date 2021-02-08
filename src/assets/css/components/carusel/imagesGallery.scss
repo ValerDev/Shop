@@ -1,0 +1,24 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import '../../includes/variables';
+
+.product-page{
+
+    .active{
+        border: 4px solid $primary-color!important;
+    }
+}
+.image-gallery-icon{
+    color: $gray;
+    padding: 0 .5em;
+    &:hover{
+        color: $primary-color;
+    }
+}
+.image-gallery-thumbnail{
+    &:focus{
+        border: 4px solid $primary-color;
+    }
+    &:hover{
+        border: 4px solid $primary-color;
+    }
+}

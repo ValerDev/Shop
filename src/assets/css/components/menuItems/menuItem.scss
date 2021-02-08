@@ -1,0 +1,138 @@
+@import '../../includes/variables';
+
+.custom-menu-item {
+    display: inline-block;
+    position: relative;
+
+    a {
+        text-decoration: none;
+    }
+
+    .submenu {
+        position: absolute;
+        top: 200%;
+        transition: .3s;
+        opacity: 0;
+        width: 180%;
+        padding: 0 1em;
+        pointer-events: none;
+        background-color: $background-color;
+        .custom-menu-item {
+            width: 100% !important;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $border-color;
+            }
+
+            .menu-content {
+                padding: .7em .5em;
+            }
+
+            &:hover {
+                * {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .submenu-right {
+        background-color: $background-color;
+        position: absolute;
+        transition: .3s;
+        width: 100%;
+        top: 200%;
+        pointer-events: none;
+        opacity: 0;
+        right: -101%;
+
+        .custom-menu-item {
+            width: 100% !important;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $border-color;
+            }
+
+            .menu-content {
+                padding: .7em .5em;
+
+                >.menu-titile {
+                    color: $text-dark-color !important;
+                }
+
+                &:hover {
+                    >.menu-titile {
+                        color: $primary-color !important;
+                    }
+                }
+            }
+
+            &:hover {
+                * {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    &:last-child {
+        border: none;
+    }
+
+    .menu-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 3em 1em 0;
+        cursor: pointer;
+
+        * {
+            transition: .2s;
+            color: $text-dark-color;
+
+            &:not(:last-child) {
+                margin-right: .5em;
+            }
+        }
+
+        i {
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &:hover {
+        * {
+            color: $primary-color;
+        }
+
+        >.submenu {
+            background-color: $background-color;
+            position: absolute;
+            top: 100%;
+            box-shadow: $shadow;
+            z-index: 1;
+            pointer-events: all;
+            opacity: 1;
+
+            * {
+                color: $text-dark-color;
+            }
+        }
+
+        >.submenu-right {
+            background-color: $background-color;
+            position: absolute;
+            top: 0%;
+            box-shadow: $shadow;
+            z-index: 1;
+            opacity: 1;
+            pointer-events: all;
+
+            * {
+                color: $text-dark-color;
+            }
+        }
+    }
+}

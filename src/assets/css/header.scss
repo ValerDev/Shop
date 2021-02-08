@@ -1,0 +1,484 @@
+@import "./includes/variables";
+
+header {
+    display: flex;
+    flex-direction: column;
+
+    .top-header {
+        background-color: $background-light-color;
+
+        .top-header-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 0;
+
+            .location-info {
+                * {
+                    margin-right: .5em;
+                    text-decoration: none;
+                    color: $text-dark-color;
+                    font-size: 13px;
+                    font-weight: 600;
+                }
+            }
+
+            .personal-info {
+                * {
+                    margin-left: 1em;
+                    text-decoration: none;
+                    color: $text-dark-color;
+                    font-size: 13px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: .3s;
+
+                    &:not(:last-child) {
+                        padding-right: 1em;
+                        border-right: 1px solid $border-color;
+                    }
+
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-main {
+        background-color: $background-color;
+
+        .header-main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 3em 0;
+
+            .logo-block {
+                width: 160px;
+                height: 50px;
+
+                .logo {
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('http://blueskytechmage.com/ayo/pub/media/logo/stores/24/logo_home6.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+
+            .contact-info {
+                display: flex;
+
+                .contact-icon {
+                    width: 45px;
+                    height: 45px;
+                    background-color: $primary-color;
+                    mask-image: url('../images/hotline_icon.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    margin-right: 1em;
+                }
+
+                .info-block {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    * {
+                        margin: .2em 0;
+                    }
+
+                    .title {
+                        color: $text-light-color;
+                    }
+
+                    .phone {
+                        color: $text-dark-color;
+                        font-weight: 800;
+                    }
+                }
+            }
+
+
+
+            .mini-cart {
+                height: 50px;
+                width: 50px;
+                position: relative;
+                * {
+                    transition: .2s;
+                }
+
+                a {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .shop-counter {
+                        border-radius: 50%;
+                        padding: .5em .7em;
+                        font-size: 9px;
+                        color: $white;
+                        background-color: $primary-color;
+                        position: absolute;
+                        top: -.5em;
+                        left: 4em;
+                    }
+                }
+                .selected-products{
+                    background-color: $background-color;
+                    padding: 1em;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    background-color: $background-light-color;
+                    position: absolute;
+                    min-height: 130px;
+                    min-width: 350px;
+                    right: 100%;
+                    top: 4em;
+                    z-index: 10;
+                    border-top: 3px solid $primary-color;
+                    box-shadow: $shadow;
+                    column-rule: $text-light-color;
+                    border-radius: 5px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 32px;
+                    width: 100%;
+                    height: 100%;
+                    color: $text-light-color;
+                    cursor: pointer;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-menus {
+        display: flex;
+        background-color: $background-color;
+
+        .layout {
+            display: flex;
+            align-items: center;
+
+            .general-menu {
+                position: relative;
+                background-color: $primary-color;
+                transition: .2s;
+                padding: 1em;
+                margin-right: 1em;
+                border-radius: 5px;
+                z-index: 5;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $primary-hover-color;
+                }
+
+                .title-block {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    position: relative;
+
+                    >* {
+                        margin: 0 .5em;
+                        color: $white;
+                        font-weight: 600;
+                    }
+                }
+
+                .main-menu {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: $background-color;
+                    box-shadow: $shadow;
+                    padding: 0 .5em .5em .5em;
+                    pointer-events: none;
+                    opacity: 0;
+                    width: 100%;
+                    transition: .2s;
+
+                    &>.custom-menu-item {
+                        &:not(:last-child) {
+                            border-bottom: 1px solid $border-color;
+                        }
+
+                        &>.submenu-right {
+                            margin-left: 100px;
+                        }
+
+                        &:hover>.submenu-right {
+                            margin-left: unset;
+                            transition: all .3s;
+                        }
+
+                        .submenu-right {
+                            top: 0%;
+                            padding: 0 .5em;
+                            display: flex;
+                            right: unset;
+                            left: 100%;
+                            min-width: max-content;
+                            flex-wrap: wrap;
+                            flex-direction: row;
+
+                            .custom-menu-item {
+                                flex-basis: 33%;
+                                border-bottom: none !important;
+
+                                .menu-content {
+                                    .menu-titile {
+                                        font-weight: 800;
+                                    }
+
+                                    i {
+                                        display: none;
+                                    }
+                                }
+
+                                &:hover>.submenu-right {
+                                    box-shadow: none;
+                                }
+
+                                .submenu-right {
+                                    position: static;
+                                    opacity: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    min-width: 33%;
+
+                                    .custom-menu-item {
+                                        border-bottom: none !important;
+
+                                        .menu-content {
+                                            padding-bottom: .476em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .menu-content {
+                            padding: .655em 1em;
+
+                        }
+                    }
+                }
+
+                .main-menu-open {
+                    pointer-events: all;
+                    opacity: 1;
+                    width: 100%;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    .scrolled-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: $shadow;
+        background-color: $background-color;
+        display: flex;
+        align-items: center;
+        z-index: 6;
+        transition: .2s;
+
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        .layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo-block {
+                width: 160px;
+                height: 50px;
+                margin-right: 3em;
+
+                .logo {
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('http://blueskytechmage.com/ayo/pub/media/logo/stores/24/logo_home6.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+
+            .mini-cart {
+                height: 100%;
+                width: 50px;
+
+                * {
+                    transition: .2s;
+                }
+
+                a {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .shop-counter {
+                        border-radius: 50%;
+                        padding: .5em .7em;
+                        font-size: 9px;
+                        color: $white;
+                        background-color: $primary-color;
+                        position: absolute;
+                        top: -2.5em;
+                        left: 3em;
+                    }
+
+                    i {
+                        font-size: 32px;
+                        color: $text-light-color;
+                        cursor: pointer;
+                        position: absolute;
+                        left: 0;
+                        bottom: -.7em;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .search {
+        display: flex;
+        width: 50%;
+
+        .search-block {
+            width: 100%;
+            border: 2px solid $border-color;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            padding: .7em 1em;
+            display: flex;
+            align-items: center;
+            border-right: none;
+
+            .custom-select {
+                border-right: 1px solid $border-color;
+                padding: .0em 1em .0em 0em;
+
+                .openSelect {
+                    top: 175%;
+                    width: 113%;
+                }
+            }
+        }
+
+        .custom-button {
+            width: 25%;
+            height: 50px;
+            right: 0;
+
+            button {
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+        }
+
+        .custom-input {
+            input {
+                font-style: italic;
+            }
+        }
+    }
+
+    .scrolled {
+        height: 80px;
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .header-main-content {
+        * {
+            transition: .2s;
+        }
+
+        >i {
+            opacity: .7;
+            cursor: pointer;
+            font-size: 30px;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .scrolled-header.scrolled {
+        display: none !important;
+    }
+
+    .location-info {
+        display: none;
+    }
+
+    .personal-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        >* {
+            margin: .5em 0;
+        }
+    }
+
+    .search {
+        width: 100% !important;
+    }
+ header{
+
+     .logo-block {
+         position: absolute;
+         left: 3em;
+        }
+    }
+}
+
+@media only screen and (max-width: 395px) {
+    header {}
+}

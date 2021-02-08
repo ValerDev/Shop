@@ -1,0 +1,13 @@
+@import '../../includes/variables';
+
+.custom-input{
+    width: 100%;
+    padding: 0 1em;
+    *{transition: .2s;}
+    input{
+        width: 100%;
+        border: none;
+        outline: 0;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,23 @@
+@import '../../includes/variables';
+
+.rating-block{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5em 0;
+    >*{
+        transition: .3s;
+    }
+    .far.fa-star.empty{
+        color: gold;
+    }
+    .fas.fa-star.full{
+    color: gold;
+    }
+    .fa-star{
+        cursor: pointer;
+        &:hover{
+            opacity: .5;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.custom-menu-item {
+  display: inline-block;
+  position: relative;
+}
+.custom-menu-item a {
+  text-decoration: none;
+}
+.custom-menu-item .submenu {
+  position: absolute;
+  top: 200%;
+  transition: 0.3s;
+  opacity: 0;
+  width: 180%;
+  padding: 0 1em;
+  pointer-events: none;
+  background-color: #ffffff;
+}
+.custom-menu-item .submenu .custom-menu-item {
+  width: 100% !important;
+}
+.custom-menu-item .submenu .custom-menu-item:not(:last-child) {
+  border-bottom: 1px solid #e1e1e1;
+}
+.custom-menu-item .submenu .custom-menu-item .menu-content {
+  padding: 0.7em 0.5em;
+}
+.custom-menu-item .submenu .custom-menu-item:hover * {
+  color: #0aa493;
+}
+.custom-menu-item .submenu-right {
+  background-color: #ffffff;
+  position: absolute;
+  transition: 0.3s;
+  width: 100%;
+  top: 200%;
+  pointer-events: none;
+  opacity: 0;
+  right: -101%;
+}
+.custom-menu-item .submenu-right .custom-menu-item {
+  width: 100% !important;
+}
+.custom-menu-item .submenu-right .custom-menu-item:not(:last-child) {
+  border-bottom: 1px solid #e1e1e1;
+}
+.custom-menu-item .submenu-right .custom-menu-item .menu-content {
+  padding: 0.7em 0.5em;
+}
+.custom-menu-item .submenu-right .custom-menu-item .menu-content > .menu-titile {
+  color: #222222 !important;
+}
+.custom-menu-item .submenu-right .custom-menu-item .menu-content:hover > .menu-titile {
+  color: #0aa493 !important;
+}
+.custom-menu-item .submenu-right .custom-menu-item:hover * {
+  color: #0aa493;
+}
+.custom-menu-item:last-child {
+  border: none;
+}
+.custom-menu-item .menu-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 3em 1em 0;
+  cursor: pointer;
+}
+.custom-menu-item .menu-content * {
+  transition: 0.2s;
+  color: #222222;
+}
+.custom-menu-item .menu-content *:not(:last-child) {
+  margin-right: 0.5em;
+}
+.custom-menu-item .menu-content i {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+}
+.custom-menu-item:hover * {
+  color: #0aa493;
+}
+.custom-menu-item:hover > .submenu {
+  background-color: #ffffff;
+  position: absolute;
+  top: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  z-index: 1;
+  pointer-events: all;
+  opacity: 1;
+}
+.custom-menu-item:hover > .submenu * {
+  color: #222222;
+}
+.custom-menu-item:hover > .submenu-right {
+  background-color: #ffffff;
+  position: absolute;
+  top: 0%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  z-index: 1;
+  opacity: 1;
+  pointer-events: all;
+}
+.custom-menu-item:hover > .submenu-right * {
+  color: #222222;
+}

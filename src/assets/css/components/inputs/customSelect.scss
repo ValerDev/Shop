@@ -1,0 +1,65 @@
+@import '../../includes/variables';
+
+.custom-select {
+    width: max-content;
+    .select-content {
+        width: 120px;
+        position: relative;
+        
+        * {
+            transition: .2s;
+        }
+
+        .selected-block {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $text-light-color;
+            cursor: pointer;
+
+            .title {
+                max-width: 90%;
+                overflow: hidden;
+            }
+
+            .pntik {
+                transform: rotate(90deg);
+                font-size: 10px;
+            }
+        }
+
+        .select-options-block {
+            width: 100%;
+            overflow-x: hidden;
+            box-shadow: $shadow;
+            color: $text-light-color;
+            position: absolute;
+            opacity: 0;
+            top: 50%;
+            pointer-events: none;
+            background-color: $background-color;
+            z-index: 7;
+            .option {
+                padding: .5em;
+                transition: .2s;
+                cursor: pointer;
+
+                &:hover {
+                    color: $text-dark-color;
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .openSelect {
+            opacity: 1;
+            pointer-events: all;
+            top: 120%;
+        }
+
+        .rotate {
+            transform: rotate(270deg) !important;
+        }
+    }
+}

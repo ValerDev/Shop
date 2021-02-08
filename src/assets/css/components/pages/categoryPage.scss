@@ -1,0 +1,71 @@
+@import '../../includes/variables';
+
+
+.category-page{
+    display: flex;
+    *{
+        transition: .2s;
+    }
+    .danger{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: .5em;
+        height: max-content;
+        background-color: #fdf0d5;
+        font-size: 20px;
+        color: $danger;
+        font-weight: 600;
+        i{
+            margin-right: 1em;
+            color: $danger;
+        }
+    }
+    .products-block{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 4em;
+        width: 100%;
+    }
+    .filters-block{
+        min-width: 200px;
+        padding-right: 1em;
+        padding-top: 1em;
+        .choose-price{
+            >*{
+                margin: .5em 0;
+            }
+            .price{
+                color: $primary-color;
+                font-weight: 600;
+            }
+        }
+        .choose-size{
+            display: flex;
+            flex-direction: column;
+            margin: .5em 0;
+            >*{
+                margin: .5em 0;
+            }
+            .sizies{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .size{
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    border: 1px solid $border-color;
+                    color: $text-dark-color;
+                    &:hover{
+                        color: $white;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

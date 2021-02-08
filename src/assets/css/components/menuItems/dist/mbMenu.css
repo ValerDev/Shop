@@ -1,0 +1,57 @@
+.mb-menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  z-index: 999;
+  left: 0;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+.mb-menu * {
+  transition: 0.3s;
+}
+.mb-menu .fone {
+  width: 15%;
+  height: 100%;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.7);
+}
+.mb-menu .menu-content {
+  position: relative;
+  width: 85%;
+  height: 100%;
+  background-color: #ebebeb;
+  overflow-y: auto;
+}
+.mb-menu .menu-content .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.7em;
+  height: 50px;
+  background-color: #0aa493;
+}
+.mb-menu .menu-content .head > span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.mb-menu .menu-content .head > i {
+  opacity: 0.5;
+  cursor: pointer;
+  font-size: 25px;
+}
+.mb-menu .menu-content .head > i:active {
+  opacity: 1;
+}
+
+.open {
+  width: 100%;
+  opacity: 1;
+  pointer-events: all;
+}

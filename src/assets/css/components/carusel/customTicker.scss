@@ -1,0 +1,13 @@
+@import '../../includes/variables';
+
+
+.custom-ticker{
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    p{
+        width: max-content;
+        margin: 0 3em;
+    }
+}

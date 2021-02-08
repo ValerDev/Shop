@@ -1,0 +1,49 @@
+@import '../../includes/variables';
+
+.mini-info-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    padding: 1em;
+    *{
+        transition: .2s;
+    }
+    &:hover{
+        .icon{
+            animation-name: rotateing!important;
+        }
+    }
+    >.icon{
+        width: 40px;
+        height: 40px;
+        background-color: $primary-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin: 0 1em;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+    }
+    >.content{
+        display: flex;
+        flex-direction: column;
+        >*{
+            width: max-content;
+        }
+        >.title{
+            font-size: 15px;
+            font-weight: 800;
+            color: $text-dark-color;
+        }
+        >.description{
+            font-size: 15px;
+            font-weight: 400;
+            color: $text-light-color;
+        }
+    }
+}
+
+@keyframes rotateing {
+    100%{ transform: rotate(360deg);}
+}
