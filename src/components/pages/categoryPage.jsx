@@ -47,7 +47,6 @@ useEffect(() => {
     return (
         <section id={ID.id}>
             <div className='layout'>
-
                 <div className='category-page' >
                     <div className="filters-block">
                         <div className="choose-price">
